@@ -22,4 +22,5 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 	@Query(value="delete from customer where id =?1", nativeQuery = true)
 	public void deleteCustomerById(Integer id);
 
+	public List<Customer> findByLevelOrderByName(Integer level);
 }
