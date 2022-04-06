@@ -9,7 +9,6 @@
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 <link href="${contextRoot}/css/bootstrap.min.css" rel="stylesheet" />
-<script src="${contextRoot}/js/jquery-3.6.0.js"></script>
 </head>
 <body>
 
@@ -22,18 +21,20 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Features</a>
+				<li class="nav-item active"><a class="nav-link"
+					href="${contextRoot}/">Home <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-				<li class="nav-item"><a class="nav-link disabled">Disabled</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="${contextRoot}/message/add">新增留言</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="${contextRoot}/message/viewMessages">查看留言</a></li>
+					<li class="nav-item"><a class="nav-link"
+					href="${contextRoot}/message/ajax-massages">Ajax</a></li>
 			</ul>
 		</div>
 	</nav>
 
+	<script src="${contextRoot}/js/jquery-3.6.0.js"></script>
 	<script src="${contextRoot}/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

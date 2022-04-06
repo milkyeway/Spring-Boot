@@ -89,4 +89,9 @@ public class CustomerApi {
 		dao.deleteCustomerById(id);
 		return true;
 	}
+	
+	@GetMapping(value="customer/level/{level}")
+	public List<Customer> findByLevel(@PathVariable Integer level){
+		return dao.findByLevelOrderByName(level);
+	}
 }
